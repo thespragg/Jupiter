@@ -26,16 +26,16 @@ impl Block {
     }
 
     pub fn next (old_block: &Block, validator: Hash) -> Block {
-         let mut block = Block {
-                index: old_block.index + 1,
-                timestamp: now(),
-                transactions: Vec::new(),
-                hash: String::new(),
-                prev_block_hash: old_block.hash.clone(),
-                validator: validator,
-            };
-            block.hash = block.hash();
-            block
+        let mut block = Block {
+            index: old_block.index + 1,
+            timestamp: now(),
+            transactions: Vec::new(),
+            hash: String::new(),
+            prev_block_hash: old_block.hash.clone(),
+            validator: validator,
+        };
+        block.hash = block.hash();
+        block
     }
 }
 
