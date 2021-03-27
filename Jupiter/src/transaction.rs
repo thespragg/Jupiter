@@ -9,8 +9,7 @@ pub struct Transaction {
     pub hash : Hash
 }
 
-
-impl ComputeHash for Transaction {
+impl Hashable for Transaction {
     fn bytes (&self) -> Vec<u8> {
         let mut bytes = vec![];
         bytes.extend(&*self.to_address.as_bytes());

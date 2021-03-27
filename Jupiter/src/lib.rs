@@ -2,8 +2,11 @@ mod block;
 pub use crate::block::Block;
 mod transaction;
 pub use crate::transaction::Transaction;
-mod hash;
-pub use crate::hash::ComputeHash;
+mod hashable;
+pub use crate::hashable::Hashable;
+mod blockchain;
+pub use crate::blockchain::Blockchain;
+
 use std::time::{SystemTime, UNIX_EPOCH};
 
 type Hash = String;

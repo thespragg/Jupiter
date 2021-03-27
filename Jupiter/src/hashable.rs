@@ -1,4 +1,4 @@
-pub trait ComputeHash {
+pub trait Hashable {
     fn bytes (&self) -> Vec<u8>;
 
     fn hash (&self) -> String {
