@@ -5,8 +5,7 @@ use super::*;
 pub struct Transaction {
     pub to_address : Hash,
     pub from_address : Hash,
-    pub amnt : u64,
-    pub hash : Hash
+    pub amnt : u64
 }
 
 impl Hashable for Transaction {
@@ -15,7 +14,6 @@ impl Hashable for Transaction {
         bytes.extend(&*self.to_address.as_bytes());
         bytes.extend(&*self.from_address.as_bytes());
         bytes.extend(&self.amnt.to_be_bytes());
-        bytes.extend(&*self.hash.as_bytes());
         bytes
     }
 }

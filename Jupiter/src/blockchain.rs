@@ -35,6 +35,24 @@ impl Blockchain {
         &self.blocks.push(block);
     }
 
+    pub fn add_candidate(&mut self, block : Block) {
+        &self.candidates.push(block);
+    }
+
+    pub fn validate_block(&self, block: &Block) -> bool {
+        let prev_block = &self.get_previous_block();
+        if prev_block.index + 1 != block.index {
+            false;
+        }
+        if prev_block.hash != block.prev_block_hash {
+            false;
+        }
+        if block.hash() == block.hash {
+            false;
+        }
+        true
+    }
+
     pub fn is_valid(&self) -> bool {
         let current_block = &self.get_latest_block();
         let previous_block = &self.get_previous_block();

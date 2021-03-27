@@ -11,4 +11,6 @@ name = "jupiterlib"
 path = "src/lib.rs"
 
 [dependencies]
-crypto-hash = "0.3.3"
+rust-crypto = "0.2.26"
+
+openssl = "0.10.28"
