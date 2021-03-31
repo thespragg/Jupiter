@@ -6,8 +6,6 @@ mod hashable;
 pub use crate::hashable::Hashable;
 mod blockchain;
 pub use crate::blockchain::Blockchain;
-mod wallet;
-pub use crate::wallet::Wallet;
 
 use std::time::{SystemTime, UNIX_EPOCH};
 

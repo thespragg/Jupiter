@@ -10,7 +10,9 @@ edition = "2018"
 name = "jupiterlib"
 path = "src/lib.rs"
 
-[dependencies]
-rust-crypto = "0.2.26"
+[dependencies.jupiter-crypt]
+version = "0.1.0"
+path = "../jupiter-crypt"
 
-openssl = "0.10.28"
+[dependencies.rust-crypto]
+version = "0.2.26"
