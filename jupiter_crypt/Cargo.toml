@@ -4,7 +4,8 @@ edition = "2018"
 name = "jupiter_crypt"
 version = "0.1.0"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies.getrandom]
+version = "0.2.2"
 
-[dependencies.rand]
-version = "0.3.0"
+[dependencies.hex]
+version = "0.3.1"
